@@ -49,7 +49,7 @@ module.exports = {
 	async execute(interaction) {
         let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
         let db = JSON.parse(dbJSON);
-        const index = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').toLowerCase());
+        const index = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').trim().toLowerCase());
         if (index == -1) {
             await interaction.reply('**' + interaction.options.getString('name') + '** is not in the database! Try adding it with \`\/add\`!');
             return;
@@ -65,7 +65,7 @@ module.exports = {
                 await interaction.reply('**' + db[index].name + '** is already in the database as a tier **' + interaction.options.getInteger('tier') + '** blaster!');
             }
         } else if (interaction.options.getSubcommand() == 'name') {
-            const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').toLowerCase());
+            const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').trim().toLowerCase());
             if (existCheck != -1) {
                 await interaction.reply('**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster!');
                 return;

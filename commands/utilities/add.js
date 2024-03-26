@@ -30,7 +30,7 @@ module.exports = {
 
         let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
         let db = JSON.parse(dbJSON);
-        const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').toLowerCase());
+        const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').trim().toLowerCase());
         if (existCheck != -1) {
             if (db[existCheck].tier != interaction.options.getInteger('tier')) {
                 await interaction.reply('**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster! If you\'d like to change its tier to ' + interaction.options.getInteger('tier') + ', use the \`\/change tier\` command.');
@@ -41,7 +41,7 @@ module.exports = {
         }
         const date = new Date();
         let toAdd = {
-            "name":interaction.options.getString('name'),
+            "name":interaction.options.getString('name').trim(),
             "tier":interaction.options.getInteger('tier'), 
             "caseID":"core", 
             "userID":interaction.user.id, 

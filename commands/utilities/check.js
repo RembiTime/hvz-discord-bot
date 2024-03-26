@@ -54,7 +54,7 @@ module.exports = {
         if (interaction.options.getSubcommand() == 'blaster') {
             let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
             let db = JSON.parse(dbJSON);
-            const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('blaster_name').toLowerCase());
+            const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('blaster_name').trim().toLowerCase());
             if (existCheck != -1) {
                 if (db[existCheck].tier == -1) {
                     await interaction.reply('**' + db[existCheck].name + '** is already pending review! Please check the \`\/lookup\` command later.');
@@ -74,7 +74,7 @@ module.exports = {
             
            const date = new Date();
             let toAdd = {
-                "name":interaction.options.getString('blaster_name'),
+                "name":interaction.options.getString('blaster_name').trim(),
                 "tier":-1, 
                 "caseID":interaction.options.getString('case_id'), 
                 "userID":interaction.user.id, 
