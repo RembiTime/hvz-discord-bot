@@ -76,7 +76,7 @@ module.exports = {
             let toAdd = {
                 "name":interaction.options.getString('blaster_name'),
                 "tier":-1, 
-                "caseid":interaction.options.getString('case_id'), 
+                "caseID":interaction.options.getString('case_id'), 
                 "userID":interaction.user.id, 
                 "messageID":msg.id, 
                 "date": (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(),
@@ -92,6 +92,7 @@ module.exports = {
             msg.react('3️⃣');
             msg.react('🇽');
             msg.react('*️⃣');
+            msg.react('🤔');
             msg.react('🗑️');
 
             } else if (interaction.options.getSubcommand() == 'modifications') {
@@ -111,7 +112,7 @@ module.exports = {
                 let toAdd = {
                     "description":interaction.options.getString('mod_description'),
                     "tier":-1, 
-                    "caseid":interaction.options.getString('case_id'), 
+                    "caseID":interaction.options.getString('case_id'), 
                     "userID":interaction.user.id, 
                     "messageID":msg.id, 
                     "date": (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(),
@@ -126,6 +127,7 @@ module.exports = {
                 msg.react('2️⃣');
                 msg.react('3️⃣');
                 msg.react('🇽');
+                msg.react('🤔');
                 msg.react('🗑️');
                 }
 

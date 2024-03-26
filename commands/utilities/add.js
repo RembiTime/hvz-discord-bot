@@ -15,8 +15,19 @@ module.exports = {
             .setDescription("Blaster tier (4 is for banned blasters)")
             .setRequired(true)
             .setMinValue(1)
-            .setMaxValue(4)),
+            .setMaxValue(4))
+        .addAttachmentOption(option => 
+            option.setName('image')
+            .setDescription('Blaster image')),
 	async execute(interaction) {
+        var img = interaction.options.getAttachment('image') ?? "";
+        if (img != "" && img.contentType != "image/gif" && img.contentType != "image/jpeg" && img.contentType != "image/png") {
+            await interaction.reply('Please submit an *image* of your blaster!');
+            return;
+        } else if (img != "") {
+            img = img.url;
+        }
+
         let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
         let db = JSON.parse(dbJSON);
         const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').toLowerCase());
@@ -32,10 +43,11 @@ module.exports = {
         let toAdd = {
             "name":interaction.options.getString('name'),
             "tier":interaction.options.getInteger('tier'), 
-            "caseid":"core", 
+            "caseID":"core", 
             "userID":interaction.user.id, 
             "messageID":"", 
-            "date": (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear()
+            "date": (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(),
+            "image": img
         }
 
         db.push(toAdd);

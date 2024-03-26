@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 let coreRoleID = '585598775805083660'
+let unanimousCapacity = 3;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildMembers, GatewayIntentBits.MessageContent], partials: [Partials.Message, Partials.Channel, Partials.Reaction] });
 
@@ -128,6 +129,7 @@ function switchFromBlastToMod(index) {
 }
 
 client.on(Events.MessageReactionAdd, async (reaction, user) => {
+
 	if (reaction.partial) {
 		try {
 			await reaction.fetch();
@@ -154,12 +156,38 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 			goToDB = mod;
 		} 
 
+		let reactionHasOverThreeQuarters = true;
+		reactions = [];
+		reaction.message.reactions.cache.forEach(react => {
+			reactions.push({name: react._emoji.name, count: react.count - 1});
+			if (!(reaction.count-1 >= (react.count-1) * 4) && reaction.emoji.name != react._emoji.name) {
+				reactionHasOverThreeQuarters = false;
+			}
+		});
 
 		await reaction.message.guild.members.fetch(); // cache all users (so it can find how many are in core)
 		let numCore = await reaction.message.guild.roles.cache.get(coreRoleID).members.size;
 		let author = reaction.message.guild.members.cache.get(goToDB[index].userID);
 
-		if (reaction.count - 1 >= numCore / 2 && reaction.emoji.name != "*️⃣" && reaction.message.reactions.cache.get('*️⃣').count - 1 >= (numCore / 2) - 2) { // Conditional if at least half - 2 vote conditional
+		let consensusReached = false;
+		let isConditional = false;
+		if (!reactionHasOverThreeQuarters) {
+			if (reaction.count - 1 >= numCore / 2 && reaction.emoji.name != "*️⃣" && reaction.emoji.name != "🤔") {
+				consensusReached = true;
+			}
+			if (reaction.message.reactions.cache.get('*️⃣') != undefined && reaction.message.reactions.cache.get('*️⃣').count - 1 >= (numCore / 2) - 2) { // Conditional if at least half - 2 vote conditional
+				isConditional = true;
+			}
+		} else  {
+			if (reaction.count - 1 >= unanimousCapacity && reaction.emoji.name != "*️⃣" && reaction.emoji.name != "🤔") {
+				consensusReached = true;
+			}
+			if (reaction.message.reactions.cache.get('*️⃣') != undefined && reaction.message.reactions.cache.get('*️⃣').count - 1 >= unanimousCapacity - 1) {
+				isConditional = true;
+			}
+		}
+
+		if (consensusReached && isConditional) { // Conditional if at least half - 2 vote conditional
 			switch (reaction.emoji.name) {
 				case "1️⃣":
 					const embed1 = new EmbedBuilder(reaction.message.embeds[0])
@@ -209,7 +237,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 					deleteBlaster(inBlastDB, index);
 					break;
 			}
-		} else if (reaction.count - 1 >= numCore / 2 && reaction.emoji.name != "*️⃣") {
+		} else if (consensusReached) {
 			switch (reaction.emoji.name) {
 				case "1️⃣":
 					if (inBlastDB) {

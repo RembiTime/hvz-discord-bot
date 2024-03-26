@@ -2,7 +2,7 @@
     {
         "name": "Nerf Rival Vision",
         "tier": 4,
-        "caseid": "rps128",
+        "caseID": "rps128",
         "userID": "224652587507384320",
         "messageID": "",
         "date": "03/25/2024",
@@ -11,10 +11,55 @@
     {
         "name": "Nerf Zombie Strike Blowdart",
         "tier": 1,
-        "caseid": "rps128",
+        "caseID": "rps128",
         "userID": "224652587507384320",
         "messageID": "",
         "date": "03/25/2024",
         "image": "https://m.media-amazon.com/images/I/613OZuu706L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+        "name": "Tester",
+        "tier": 1,
+        "caseID": "rps128",
+        "userID": "224652587507384320",
+        "messageID": "1222076601093722193",
+        "date": "03/26/2024",
+        "image": "https://media.discordapp.net/ephemeral-attachments/1221893782644068506/1222076594487558144/brain.png?ex=6614e685&is=66027185&hm=1a6d2a279e47e8fe0300339cf74571e66b0788984d71f8aa5136ccaebfb9e2cc&=&format=webp&quality=lossless&width=256&height=256"
+    },
+    {
+        "name": "Hammer",
+        "tier": 1,
+        "caseID": "nrm98",
+        "userID": "306244074984177664",
+        "messageID": "1222178064755064934",
+        "date": "3/26/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1221893782644068506/1222178059151740978/rn_image_picker_lib_temp_65eceeb3-308c-4540-bbc2-b9e53d342ed8.jpg?ex=66154504&is=6602d004&hm=da971564faa97af623813ab1f891e1c039bfda5d14a598c270f0e2bc082848a1&"
+    },
+    {
+        "name": "Tester2",
+        "tier": -1,
+        "caseID": "rps128",
+        "userID": "224652587507384320",
+        "messageID": "1222188794216714343",
+        "date": "3/26/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1221893782644068506/1222188783613771817/1200px-Jorge_Luis_Borges_1951_by_Grete_Stern.jpg?ex=66154f01&is=6602da01&hm=02639a7255c7e382bab44023efbec5dcfd723e7bd52f93ffeb11558c98a39b33&"
+    },
+    {
+        "name": "ndaj",
+        "tier": -1,
+        "caseID": "rps128",
+        "userID": "224652587507384320",
+        "messageID": "1222190107759611944",
+        "date": "3/26/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1221893782644068506/1222190099228528711/1200px-Jorge_Luis_Borges_1951_by_Grete_Stern.jpg?ex=6615503a&is=6602db3a&hm=f96365302a16a0fbb3643be911c91b33ea8a60754c93c51d4d6a028576595f2f&"
+    },
+    {
+        "name": "Test",
+        "tier": 1,
+        "caseID": "rps128",
+        "userID": "224652587507384320",
+        "messageID": "1222192978152521849",
+        "date": "3/26/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1221893782644068506/1222192972683018270/1200px-Jorge_Luis_Borges_1951_by_Grete_Stern.jpg?ex=661552e7&is=6602dde7&hm=70384cf52ae968a895a4a3d2f7f052d1f35aca6c8c0842ac6fa5ad3e48327ff5&"
     }
 ]
