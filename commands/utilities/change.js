@@ -65,6 +65,11 @@ module.exports = {
                 await interaction.reply('**' + db[index].name + '** is already in the database as a tier **' + interaction.options.getInteger('tier') + '** blaster!');
             }
         } else if (interaction.options.getSubcommand() == 'name') {
+            const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').toLowerCase());
+            if (existCheck != -1) {
+                await interaction.reply('**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster!');
+                return;
+            }
             oldName = db[index].name;
             db[index].name = interaction.options.getString('new_name');
             dbJSON = JSON.stringify(db, null, 4);

@@ -1,7 +1,7 @@
 [
     {
         "name": "Nerf Rival Vision",
-        "tier": 4,
+        "tier": 1,
         "caseID": "rps128",
         "userID": "224652587507384320",
         "messageID": "",
@@ -18,12 +18,282 @@
         "image": "https://m.media-amazon.com/images/I/613OZuu706L._AC_UF1000,1000_QL80_.jpg"
     },
     {
-        "name": "cnskac",
-        "tier": 3,
-        "caseID": "cnka",
-        "userID": "224652587507384320",
-        "messageID": "1222209478242603119",
+        "name": "Hog Wild Llama Popper",
+        "tier": 1,
+        "caseID": "scc98",
+        "userID": "735682507336581161",
+        "messageID": "1222212830502060102",
         "date": "3/26/2024",
-        "image": "https://cdn.discordapp.com/ephemeral-attachments/1221893782644068506/1222209465424543754/1200px-Jorge_Luis_Borges_1951_by_Grete_Stern.jpg?ex=66156244&is=6602ed44&hm=4b1d1304f9e1795ebf825eaf8b88e7f83cfff9fa9c4bbcb880f84e9d521b2718&"
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1221893782644068506/1222212815687782491/IMG_4732.jpg?ex=66156562&is=6602f062&hm=b98b5833f4281c51c26762ff252d55ba590955f875d468d7f2eb4ff162137328&"
+    },
+    {
+        "name": "Nerf DinoSquad Tricera-Blast",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/61dGOxEVSoL._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Zombie Strike Flip Fury",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71OtU2Op-kL._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Rival Helios",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/5/58/Helios.png/revision/latest/scale-to-width-down/1000?cb=20170914030533"
+    },
+    {
+        "name": "Nerf Rival Sideswipe",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/3/34/Rivalsideswipe.png/revision/latest/scale-to-width-down/1000?cb=20210211223000"
+    },
+    {
+        "name": "Nerf DinoSquad Rex-Rampage",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71QDce-DldL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+        "name": "Nerf Rival Apollo",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/e/ec/Apollo-red.jpg/revision/latest/scale-to-width-down/1000?cb=20150712055045"
+    },
+    {
+        "name": "Nerf Elite Double Punch",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71vreXHWVRL._AC_SL1500_.jpg"
+    },
+    {
+        "name": "Nerf Ender Dragon Blaster",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71tmOE1WY+L._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Rival Artemis",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/c/ce/Artemis-red.jpg/revision/latest?cb=20161205001724"
+    },
+    {
+        "name": "Nerf Rival Hades",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/b/b2/Hades.JPG/revision/latest/scale-to-width-down/1000?cb=20180623102253"
+    },
+    {
+        "name": "Nerf Elite HyperFire",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71IOhKJiFSL._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Rival Nemesis",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/6/63/NemesisMXVII10K.jpg/revision/latest/scale-to-width-down/1000?cb=20220810221301"
+    },
+    {
+        "name": "Nerf Rival Prometheus",
+        "tier": 1,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/6/6e/Prometheus.jpg/revision/latest/scale-to-width-down/1000?cb=20180702222741"
+    },
+    {
+        "name": "Nerf Elite Strongarm",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/618LQZjaFHL._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Elite Disruptor",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/51twYjKg2mL._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Rival Forerunner",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71h1xmqDNTL._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Zombie Strike Hammershot",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71wYEpQvLUL._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Rival Kronos",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/1/1f/RivalKronosRed.jpg/revision/latest?cb=20190623224837"
+    },
+    {
+        "name": "Nerf Modulus Demolisher",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/81Sid8HNQrL._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Rival Pathfinder",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/8/8f/Pathfinder.png/revision/latest/scale-to-width-down/1000?cb=20220629235008"
+    },
+    {
+        "name": "Nerf Modulus Stryfe",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71N77BDaf0L._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Rival Helix",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/8/84/Rivalhelix.png/revision/latest?cb=20210216160726"
+    },
+    {
+        "name": "Nerf Elite Rampage",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71UXi6eLm-L._AC_SX679_.jpg"
+    },
+    {
+        "name": "Nerf Rival Hera",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/3/3e/HeraMXVII1200.jpg/revision/latest/scale-to-width-down/1000?cb=20180422045637"
+    },
+    {
+        "name": "Rival Takedown",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/d/d9/TakedownXX800.jpg/revision/latest/scale-to-width-down/1000?cb=20191211132128"
+    },
+    {
+        "name": "Rival Perses",
+        "tier": 2,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://static.wikia.nocookie.net/nerf/images/1/1e/NewPersesRed.png/revision/latest?cb=20190702034323"
+    },
+    {
+        "name": "Adventure Force Nexus Pro",
+        "tier": 3,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://i5.walmartimages.com/seo/Adventure-Force-Tactical-Strike-Nexus-Pro-Ultimate-Dart-Blaster-Shoots-over-125-ft_1c73eda5-5867-462e-a985-d02974f572a7.fe174cedf76e31b5a563a2b9f1e4ea61.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF"
+    },
+    {
+        "name": "Nerf Fortnite Insightful",
+        "tier": 3,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/71OVAIblK1L._AC_SX679_.jpg"
+    },
+    {
+        "name": "Dart Zone Max Stryker",
+        "tier": 3,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://target.scene7.com/is/image/Target/GUEST_f3d1379f-0b02-4bb0-bcf8-325355692331?wid=1200&hei=1200&qlt=80&fmt=webp"
+    },
+    {
+        "name": "Nerf Fortnite AR-L",
+        "tier": 3,
+        "caseID": "sheet",
+        "userID": "",
+        "messageID": "",
+        "date": "3/26/2024",
+        "image": "https://m.media-amazon.com/images/I/61kriY4CfML._AC_SX679_.jpg"
     }
 ]
