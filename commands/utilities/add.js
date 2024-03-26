@@ -17,12 +17,12 @@ module.exports = {
             .setMinValue(1)
             .setMaxValue(4)),
 	async execute(interaction) {
-        let dbJSON = fs.readFileSync(process.env.DB_FILE);
+        let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
         let db = JSON.parse(dbJSON);
         const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').toLowerCase());
         if (existCheck != -1) {
             if (db[existCheck].tier != interaction.options.getInteger('tier')) {
-                await interaction.reply('**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster! If you\'d like to change its tier to ' + interaction.options.getInteger('tier') + ', use the \`\/change\` command.');
+                await interaction.reply('**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster! If you\'d like to change its tier to ' + interaction.options.getInteger('tier') + ', use the \`\/change tier\` command.');
             } else {
                 await interaction.reply('**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster!');
             }
@@ -40,7 +40,7 @@ module.exports = {
 
         db.push(toAdd);
         dbJSON = JSON.stringify(db, null, 4);
-        fs.writeFileSync(process.env.DB_FILE, dbJSON, "utf-8");
+        fs.writeFileSync(process.env.BLASTER_DB_FILE, dbJSON, "utf-8");
         await interaction.reply('Successfully added **' + interaction.options.getString('name') + '** as a tier **' + interaction.options.getInteger('tier') + '** blaster!');
 	},
 };

@@ -12,7 +12,7 @@ module.exports = {
 			.setRequired(true)
 			.setAutocomplete(true)),
 	async autocomplete(interaction) {
-		let dbJSON = fs.readFileSync(process.env.DB_FILE);
+		let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
 		let db = JSON.parse(dbJSON);
 		const focusedValue = interaction.options.getFocused();
 		const choices = db.map((blaster) => blaster.name);
@@ -24,9 +24,9 @@ module.exports = {
 		);
 	},
 	async execute(interaction) {
-		let dbJSON = fs.readFileSync(process.env.DB_FILE);
+		let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
 		let db = JSON.parse(dbJSON);
-		const blaster = db.find((blast) => blast.name.toLowerCase() == interaction.options.getString('name').toLowerCase())
+		const blaster = db.find((blast) => blast.name.toLowerCase() == interaction.options.getString('name').toLowerCase());
 		if (blaster == undefined) {
 			await interaction.reply('**' + interaction.options.getString('name') + '** was not found in the database. Please use \`\/check blaster\` to get it approved!')
 		} else {
