@@ -245,6 +245,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 						.setColor('#00d166')
 						.setTitle('BLASTER APPROVED - TIER 1')
 						reaction.message.edit({ embeds: [embed] });
+						reaction.message.react('📊');
 						author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **1**, meaning you may use it any time!");
 					} else {
 						const embed = new EmbedBuilder(reaction.message.embeds[0])
@@ -262,6 +263,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 						.setColor('#00d166')
 						.setTitle('BLASTER APPROVED - TIER 2')
 						reaction.message.edit({ embeds: [embed] });
+						reaction.message.react('📊');
 						author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **2**, meaning you may only use it during the day and at missions.");
 					} else {
 						const embed = new EmbedBuilder(reaction.message.embeds[0])
@@ -279,6 +281,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 						.setColor('#00d166')
 						.setTitle('BLASTER APPROVED - TIER 3')
 						reaction.message.edit({ embeds: [embed] });
+						reaction.message.react('📊');
 						author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **3**, meaning you may only use it during missions.");
 					} else {
 						const embed = new EmbedBuilder(reaction.message.embeds[0])
@@ -296,6 +299,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 						.setColor('#f93a2f')
 						.setTitle('BLASTER DENIED')
 						reaction.message.edit({ embeds: [embed] });
+						reaction.message.react('📊');
 						author.send("The blaster **" + goToDB[index].name +"** has been **denied** for play. Please don't use it.");
 					} else {
 						const embed = new EmbedBuilder(reaction.message.embeds[0])
