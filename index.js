@@ -160,7 +160,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 		reactions = [];
 		reaction.message.reactions.cache.forEach(react => {
 			reactions.push({name: react._emoji.name, count: react.count - 1});
-			if (!(reaction.count-1 >= (react.count-1) * 4) && reaction.emoji.name != react._emoji.name) {
+			if (!(reaction.count-1 >= (react.count-1) * 4) && reaction.emoji.name != react._emoji.name && reaction.emoji.name != "*️⃣") {
 				reactionHasOverThreeQuarters = false;
 			}
 		});
