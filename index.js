@@ -158,9 +158,8 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 		await reaction.message.guild.members.fetch(); // cache all users (so it can find how many are in core)
 		let numCore = await reaction.message.guild.roles.cache.get(coreRoleID).members.size;
 		let author = reaction.message.guild.members.cache.get(goToDB[index].userID);
-		numCore = 2; // TODO: REMOVE AFTER TESTING (also update conditional below)
 
-		if (reaction.count - 1 >= numCore / 2 && reaction.emoji.name != "*️⃣" && reaction.message.reactions.cache.get('*️⃣').count - 1 >= (numCore / 2) /*- 2*/) { // Conditional if at least half - 2 vote conditional
+		if (reaction.count - 1 >= numCore / 2 && reaction.emoji.name != "*️⃣" && reaction.message.reactions.cache.get('*️⃣').count - 1 >= (numCore / 2) - 2) { // Conditional if at least half - 2 vote conditional
 			switch (reaction.emoji.name) {
 				case "1️⃣":
 					const embed1 = new EmbedBuilder(reaction.message.embeds[0])
