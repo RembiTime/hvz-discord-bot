@@ -65,7 +65,7 @@ module.exports = {
                 await interaction.reply('**' + db[index].name + '** is already in the database as a tier **' + interaction.options.getInteger('tier') + '** blaster!');
             }
         } else if (interaction.options.getSubcommand() == 'name') {
-            const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').trim().toLowerCase());
+            const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('new_name').trim().toLowerCase());
             if (existCheck != -1) {
                 await interaction.reply('**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster!');
                 return;
