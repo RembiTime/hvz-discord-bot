@@ -142,6 +142,10 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 		}
 	}
 
+	if (reaction.emoji.name != "1️⃣" && reaction.emoji.name != "2️⃣" && reaction.emoji.name != "3️⃣" && reaction.emoji.name != "🇽" && reaction.emoji.name != "🗑️") {
+		return;
+	}
+
 	let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
 	let modJSON = fs.readFileSync(process.env.MOD_DB_FILE);
 	let db = JSON.parse(dbJSON);

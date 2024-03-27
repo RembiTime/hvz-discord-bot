@@ -10,7 +10,7 @@ module.exports = {
             .setDescription("Code to execute")
             .setRequired(true)),
         async execute(interaction) {
-            let toEval = interaction.options.getString("code")
+            let toEval = interaction.options.getString("code").replace(/[“”]/g, '"')
             console.log(interaction.user.tag + " used the eval command \`" + toEval +"\`")
             try {
                 const embed = new EmbedBuilder()
