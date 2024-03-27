@@ -47,7 +47,8 @@ module.exports = {
                 })
             } catch (e) {
                 interaction.reply({
-                    content: `An error occurred : \`${e.message}\``
+                    content: `An error occurred : \`${e.message}\``,
+                    ephemeral: true
                 });
             }
     

@@ -1,4 +1,4 @@
-const { Client, Collection, Events, GatewayIntentBits, Partials, EmbedBuilder } = require('discord.js');
+const { Client, Collection, Events, GatewayIntentBits, Partials, EmbedBuilder, ActivityType } = require('discord.js');
 const dotenv = require('dotenv');
 dotenv.config();
 const fs = require('node:fs');
@@ -29,6 +29,7 @@ for (const folder of commandFolders) {
 
 client.once(Events.ClientReady, readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
+	client.user.setPresence({ activities: [{ name: 'I cast Eldritch Blast(er)!', type: ActivityType.Custom }], status: 'online' });
 });
 
 client.on(Events.InteractionCreate, async interaction => {
