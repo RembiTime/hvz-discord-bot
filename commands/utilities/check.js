@@ -46,7 +46,7 @@ module.exports = {
 	async execute(interaction) {
         const img = interaction.options.getAttachment('blaster_image');
         if (img.contentType != "image/gif" && img.contentType != "image/jpeg" && img.contentType != "image/png") {
-            await interaction.reply('Please submit an *image* of your blaster!');
+            await interaction.reply({content: 'Please submit an *image* of your blaster!', ephemeral: true});
             return;
         }
 
@@ -57,9 +57,9 @@ module.exports = {
             const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('blaster_name').trim().toLowerCase());
             if (existCheck != -1) {
                 if (db[existCheck].tier == -1) {
-                    await interaction.reply('**' + db[existCheck].name + '** is already pending review! Please check the \`\/lookup\` command later.');
+                    await interaction.reply({content: '**' + db[existCheck].name + '** is already pending review! Please check the \`\/lookup\` command later.', ephemeral: true});
                 } else {
-                    await interaction.reply('**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster!');
+                    await interaction.reply({content: '**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster!', ephemeral: true});
                 }
                 return;
             }
@@ -131,6 +131,6 @@ module.exports = {
                 msg.react('🗑️');
                 }
 
-		await interaction.reply('Thanks! Your request has been submitted! You\'ll recieve a DM when a decision has been reached.');
+		await interaction.reply({content: 'Thanks! Your request has been submitted! You\'ll recieve a DM when a decision has been reached.', ephemeral: true});
 	},
 };
