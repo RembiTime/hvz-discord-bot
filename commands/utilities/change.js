@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 const dotenv = require('dotenv');
 const fs = require("fs")
+const lib = require("../../lib.js");
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -35,15 +36,8 @@ module.exports = {
                     .setDescription("Name to change to")
                     .setRequired(true))),
     async autocomplete(interaction) {
-        let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
-        let db = JSON.parse(dbJSON);
-        const focusedValue = interaction.options.getFocused();
-        const choices = db.map((blaster) => blaster.name);
-        const splitWords = focusedValue.split(" ")
-        let filtered = choices.filter(x => splitWords.every(word => x.toLowerCase().includes(word.toLowerCase())));
-        //const filtered = choices.filter(choice => choice.split(" ").forEach((blastWord) => blastWord.startsWith(focusedValue)));
         await interaction.respond(
-            filtered.map(choice => ({ name: choice, value: choice })),
+            lib.autocompleteSearch(interaction),
         );
     },
 	async execute(interaction) {

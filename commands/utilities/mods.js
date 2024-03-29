@@ -12,7 +12,18 @@ module.exports = {
             option.setName('case_id')
             .setDescription('Your case ID')
             .setMinLength(3)
-            .setMaxLength(7)),
+            .setMaxLength(7)
+            .setAutocomplete(true)),
+        async autocomplete(interaction) {
+            let modJSON = fs.readFileSync(process.env.MOD_DB_FILE);
+            let mod = JSON.parse(modJSON);
+            const focusedValue = interaction.options.getFocused();
+            const choices = mod.map((blaster) => blaster.caseID);
+            const filtered = choices.filter(choice => choice.startsWith(focusedValue)).filter((value, index) => choices.indexOf(value) == index);
+            await interaction.respond(
+                filtered.map(choice => ({ name: choice, value: choice })),
+            );
+        },
 	async execute(interaction) {
         let modJSON = fs.readFileSync(process.env.MOD_DB_FILE);
 		let mod = JSON.parse(modJSON);
