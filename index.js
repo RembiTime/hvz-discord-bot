@@ -212,7 +212,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 					
 					changeTier(inBlastDB, index, 2);
 					switchFromBlastToMod(index);
-					author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **2**. Please don't use it for right now. This is a ruling specifically for you, so others can't use it unless they request it too.");
+					author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **2**, meaning you may only use it during missions. This is a ruling specifically for you, so others can't use it unless they request it too.");
 					break;
 				case "3️⃣":
 					const embed3 = new EmbedBuilder(reaction.message.embeds[0])
@@ -222,7 +222,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 					
 					changeTier(inBlastDB, index, 3);
 					switchFromBlastToMod(index);
-					author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **3**. Please don't use it for right now. This is a ruling specifically for you, so others can't use it unless they request it too.");
+					author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **3**, meaning this blaster can **not** be used for Humans vs. Zombies. This means that the blaster might be able to play, but you'll need to talk to someone in core first.");
 					break;
 				case "🇽":
 					const embed4 = new EmbedBuilder(reaction.message.embeds[0])
@@ -269,13 +269,13 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 						.setTitle('BLASTER APPROVED? - TIER 2')
 						reaction.message.edit({ embeds: [embed] });
 						reaction.message.react('📊');
-						author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **2**. Please don't use it for right now.");
+						author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **2**, meaning you may only use it during missions.");
 					} else {
 						const embed = new EmbedBuilder(reaction.message.embeds[0])
 						.setColor('#008e44')
 						.setTitle('MODIFICATION APPROVED? - TIER 2')
 						reaction.message.edit({ embeds: [embed] });
-						author.send("The modification for the following image has been **approved** for tier **2**. Please don't use it for right now. " + goToDB[index].image);
+						author.send("The modification for the following image has been **approved** for tier **2**, meaning you may only use it during missions. " + goToDB[index].image);
 					}
 
 					changeTier(inBlastDB, index, 2);
@@ -287,13 +287,13 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 						.setTitle('BLASTER APPROVED? - TIER 3')
 						reaction.message.edit({ embeds: [embed] });
 						reaction.message.react('📊');
-						author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **3**. Please don't use it for right now.");
+						author.send("The blaster **" + goToDB[index].name +"** has been decided for tier **3**, meaning this blaster can **not** be used for Humans vs. Zombies.");
 					} else {
 						const embed = new EmbedBuilder(reaction.message.embeds[0])
 						.setColor('#008e44')
 						.setTitle('MODIFICATION APPROVED? - TIER 3')
 						reaction.message.edit({ embeds: [embed] });
-						author.send("The modification for the following image has been **approved** for tier **3**. Please don't use it for right now. " + goToDB[index].image);
+						author.send("The modification for the following image has been **approved** for tier **3**, meaning this blaster can **not** be used for Humans vs. Zombies. " + goToDB[index].image);
 					}
 
 					changeTier(inBlastDB, index, 3);

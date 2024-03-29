@@ -33,9 +33,9 @@ module.exports = {
 			switch (blaster.tier) {
 				case -1: await interaction.reply('The **' + blaster.name + '** is currently pending review. Please check back later.'); break;
 				case 1: await interaction.reply('The **' + blaster.name + '** is a tier **1** blaster. It can be used any time.'); break;
-				case 2: await interaction.reply('The **' + blaster.name + '** is a tier **2** blaster. Please don\'t use it for right now.'); break;
-				case 3: await interaction.reply('The **' + blaster.name + '** is a tier **3** blaster. Please don\'t use it for right now.'); break;
-				case 4: await interaction.reply('The **' + blaster.name + '** is a **BANNED** blaster. It can\'t be used for Humans vs. Zombies.'); break;
+				case 2: await interaction.reply('The **' + blaster.name + '** is a tier **2** blaster. It can only be used during missions.'); break;
+				case 3: await interaction.reply('The **' + blaster.name + '** is a tier **3** blaster. It can **not** be used for Humans vs. Zombies.'); break;
+				case 4: await interaction.reply('The **' + blaster.name + '** is a **BANNED** blaster. It can **not** be used for Humans vs. Zombies.'); break;
 				default: await interaction.reply('Something went wrong. Please contact someone.'); break;
 			}
 		} 

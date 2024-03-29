@@ -11,7 +11,7 @@ module.exports = {
         .addStringOption(option =>
             option.setName('case_id')
             .setDescription('Your case ID')
-            .setMinLength(4)
+            .setMinLength(3)
             .setMaxLength(7)),
 	async execute(interaction) {
         let modJSON = fs.readFileSync(process.env.MOD_DB_FILE);

@@ -15,7 +15,7 @@ module.exports = {
                     option.setName('case_id')
                     .setDescription('Your case ID')
                     .setRequired(true)
-                    .setMinLength(4)
+                    .setMinLength(3)
                     .setMaxLength(7))
                 .addStringOption(option => 
                     option.setName('blaster_name')
@@ -33,7 +33,7 @@ module.exports = {
                     option.setName('case_id')
                     .setDescription('Your case ID')
                     .setRequired(true)
-                    .setMinLength(4)
+                    .setMinLength(3)
                     .setMaxLength(7))
                 .addStringOption(option =>
                     option.setName('mod_description')
@@ -131,6 +131,6 @@ module.exports = {
                 msg.react('🗑️');
                 }
 
-		await interaction.reply({content: 'Thanks! Your request has been submitted! You\'ll recieve a DM when a decision has been reached.', ephemeral: true});
+		await interaction.reply({content: 'Thanks! Your request has been submitted! You\'ll recieve a DM when a decision has been reached.', ephemeral: false});
 	},
 };
