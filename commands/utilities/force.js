@@ -118,22 +118,22 @@ module.exports = {
                     case 2:
                         const embed2 = new EmbedBuilder(msg.embeds[0])
                             .setColor('#008e44')
-                            .setTitle('CONDITIONALLY APPROVED - TIER 2')
+                            .setTitle('CONDITIONALLY APPROVED? - TIER 2')
                         msg.edit({ embeds: [embed2] });
                         
                         changeTier(inBlastDB, index, 2);
                         switchFromBlastToMod(index);
-                        author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **2**, meaning you may only use it during the day and at missions. This is a ruling specifically for you, so others can't use it unless they request it too.");
+                        author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **2**. Please don't use it for right now. This is a ruling specifically for you, so others can't use it unless they request it too.");
                         break;
                     case 3:
                         const embed3 = new EmbedBuilder(msg.embeds[0])
                             .setColor('#008e44')
-                            .setTitle('CONDITIONALLY APPROVED - TIER 3')
+                            .setTitle('CONDITIONALLY APPROVED? - TIER 3')
                         msg.edit({ embeds: [embed3] });
                         
                         changeTier(inBlastDB, index, 3);
                         switchFromBlastToMod(index);
-                        author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **3**, meaning you may only use it at missions. This is a ruling specifically for you, so others can't use it unless they request it too.");
+                        author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **3**. Please don't use it for right now. This is a ruling specifically for you, so others can't use it unless they request it too.");
                         break;
                     case 4:
                         const embed4 = new EmbedBuilder(msg.embeds[0])
@@ -176,15 +176,15 @@ module.exports = {
                         if (inBlastDB) {
                             const embed = new EmbedBuilder(msg.embeds[0])
                             .setColor('#00d166')
-                            .setTitle('BLASTER APPROVED - TIER 2')
+                            .setTitle('BLASTER APPROVED? - TIER 2')
                             msg.edit({ embeds: [embed] });
-                            author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **2**, meaning you may only use it during the day and at missions.");
+                            author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **2**. Please don't use it for right now.");
                         } else {
                             const embed = new EmbedBuilder(msg.embeds[0])
                             .setColor('#008e44')
-                            .setTitle('MODIFICATION APPROVED - TIER 2')
+                            .setTitle('MODIFICATION APPROVED? - TIER 2')
                             msg.edit({ embeds: [embed] });
-                            author.send("The modification for the following image has been **approved** for tier **2**, meaning you may only use it during the day and at missions. " + goToDB[index].image);
+                            author.send("The modification for the following image has been **approved** for tier **2**. Please don't use it for right now. " + goToDB[index].image);
                         }
     
                         changeTier(inBlastDB, index, 2);
@@ -193,15 +193,15 @@ module.exports = {
                         if (inBlastDB) {
                             const embed = new EmbedBuilder(msg.embeds[0])
                             .setColor('#00d166')
-                            .setTitle('BLASTER APPROVED - TIER 3')
+                            .setTitle('BLASTER APPROVED? - TIER 3')
                             msg.edit({ embeds: [embed] });
-                            author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **3**, meaning you may only use it during missions.");
+                            author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **3**. Please don't use it for right now.");
                         } else {
                             const embed = new EmbedBuilder(msg.embeds[0])
                             .setColor('#008e44')
-                            .setTitle('MODIFICATION APPROVED - TIER 3')
+                            .setTitle('MODIFICATION APPROVED? - TIER 3')
                             msg.edit({ embeds: [embed] });
-                            author.send("The modification for the following image has been **approved** for tier **3**, meaning you may only use it during missions. " + goToDB[index].image);
+                            author.send("The modification for the following image has been **approved** for tier **3**. Please don't use it for right now. " + goToDB[index].image);
                         }
     
                         changeTier(inBlastDB, index, 3);
