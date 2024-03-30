@@ -1,8 +1,9 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const dotenv = require('dotenv');
 const fs = require("fs")
+const lib = require("../../lib.js");
 
-let coreRoleID = '585598775805083660'
+let coreRoleID = process.env.CORE_ROLE_ID;
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -15,13 +16,8 @@ module.exports = {
             .setMaxLength(7)
             .setAutocomplete(true)),
         async autocomplete(interaction) {
-            let modJSON = fs.readFileSync(process.env.MOD_DB_FILE);
-            let mod = JSON.parse(modJSON);
-            const focusedValue = interaction.options.getFocused();
-            const choices = mod.map((blaster) => blaster.caseID);
-            const filtered = choices.filter(choice => choice.startsWith(focusedValue)).filter((value, index) => choices.indexOf(value) == index);
             await interaction.respond(
-                filtered.map(choice => ({ name: choice, value: choice })),
+                lib.autocompleteCaseID(interaction)
             );
         },
 	async execute(interaction) {
@@ -58,9 +54,11 @@ module.exports = {
                 } else {
                     tier = "Approved Tier " + blaster.tier;
                 }
-                embed.addFields({ name: tier, value: blaster.description + " [[image link]](" + blaster.image + ")"});
+                const img = blaster.image !== "" ? " [[image link]](" + blaster.image + ")" : "";
+                embed.addFields({ name: tier, value: blaster.description + img});
             });
         }
+        embed.setColor("#a652bb");
 
         await interaction.reply({content: output, embeds: [embed]});
 	},

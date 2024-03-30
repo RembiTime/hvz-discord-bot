@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 const dotenv = require('dotenv');
 const fs = require('node:fs');
-const approvalChannelID = '1222008392583745588';
+const approvalChannelID = process.env.APPROVAL_CHANNEL_ID;
 const lib = require("../../lib.js");
 
 module.exports = {
@@ -47,7 +47,7 @@ module.exports = {
             console.log(interaction.user.tag + " used the force command on " + interaction.options.getString('messageid'));
             await interaction.reply("Done!")
         } else {
-            await interaction.reply('The message ID was not found as pending.');
+            await interaction.reply({content: 'The message ID was not found as pending.', ephemeral: true});
         }
 	},
 };

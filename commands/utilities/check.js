@@ -1,7 +1,7 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const dotenv = require('dotenv');
 const fs = require("fs");
-const approvalChannelID = '1222008392583745588';
+const approvalChannelID = process.env.APPROVAL_CHANNEL_ID;
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -27,7 +27,7 @@ module.exports = {
                     .setRequired(true)))
         .addSubcommand(subcommand =>
             subcommand
-                .setName('modifications')
+                .setName('modification')
                 .setDescription('Submits a request to check a blaster with modifications or a custom blaster')
                 .addStringOption(option =>
                     option.setName('case_id')
@@ -76,7 +76,7 @@ module.exports = {
             let toAdd = {
                 "name":interaction.options.getString('blaster_name').trim(),
                 "tier":-1, 
-                "caseID":interaction.options.getString('case_id'), 
+                "caseID":interaction.options.getString('case_id').trim().toLowerCase(), 
                 "userID":interaction.user.id, 
                 "messageID":msg.id, 
                 "date": (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(),
@@ -95,41 +95,41 @@ module.exports = {
             msg.react('🤔');
             msg.react('🗑️');
 
-            } else if (interaction.options.getSubcommand() == 'modifications') {
-                let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
-                let db = JSON.parse(dbJSON);
-                
-                const embed = new EmbedBuilder()
-                    .setColor('#ffaa33')
-                    .setAuthor({ name: '@' + interaction.user.tag + ' - ' + interaction.options.getString('case_id'), iconURL: interaction.user.avatarURL()})
-                    .setTitle('MODIFICATION APPROVAL REQUEST')
-                    .setDescription(interaction.options.getString('mod_description'))
-                    .setImage(img.url);
-                
-                const msg = await approvalChannel.send({ embeds: [embed] });
-                
-               const date = new Date();
-                let toAdd = {
-                    "description":interaction.options.getString('mod_description'),
-                    "tier":-1, 
-                    "caseID":interaction.options.getString('case_id'), 
-                    "userID":interaction.user.id, 
-                    "messageID":msg.id, 
-                    "date": (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(),
-                    "image": img.url
-                }
-    
-                db.push(toAdd);
-                dbJSON = JSON.stringify(db, null, 4);
-                fs.writeFileSync(process.env.BLASTER_DB_FILE, dbJSON, "utf-8"); 
-    
-                msg.react('1️⃣');
-                msg.react('2️⃣');
-                msg.react('3️⃣');
-                msg.react('🇽');
-                msg.react('🤔');
-                msg.react('🗑️');
-                }
+        } else if (interaction.options.getSubcommand() == 'modification') {
+            let dbJSON = fs.readFileSync(process.env.MOD_DB_FILE);
+            let db = JSON.parse(dbJSON);
+            
+            const embed = new EmbedBuilder()
+                .setColor('#ffaa33')
+                .setAuthor({ name: '@' + interaction.user.tag + ' - ' + interaction.options.getString('case_id'), iconURL: interaction.user.avatarURL()})
+                .setTitle('MODIFICATION APPROVAL REQUEST')
+                .setDescription(interaction.options.getString('mod_description'))
+                .setImage(img.url);
+            
+            const msg = await approvalChannel.send({ embeds: [embed] });
+            
+            const date = new Date();
+            let toAdd = {
+                "description":interaction.options.getString('mod_description'),
+                "tier":-1, 
+                "caseID":interaction.options.getString('case_id').trim().toLowerCase(), 
+                "userID":interaction.user.id, 
+                "messageID":msg.id, 
+                "date": (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear(),
+                "image": img.url
+            }
+
+            db.push(toAdd);
+            dbJSON = JSON.stringify(db, null, 4);
+            fs.writeFileSync(process.env.BLASTER_DB_FILE, dbJSON, "utf-8"); 
+
+            msg.react('1️⃣');
+            msg.react('2️⃣');
+            msg.react('3️⃣');
+            msg.react('🇽');
+            msg.react('🤔');
+            msg.react('🗑️');
+        }
 
 		await interaction.reply({content: 'Thanks! Your request has been submitted! You\'ll recieve a DM when a decision has been reached.', ephemeral: false});
 	},

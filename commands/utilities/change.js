@@ -45,7 +45,7 @@ module.exports = {
         let db = JSON.parse(dbJSON);
         const index = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('name').trim().toLowerCase());
         if (index == -1) {
-            await interaction.reply('**' + interaction.options.getString('name') + '** is not in the database! Try adding it with \`\/add\`!');
+            await interaction.reply({content: '**' + interaction.options.getString('name') + '** is not in the database! Try adding it with \`\/add\`!', ephemeral: true});
             return;
         }
         if (interaction.options.getSubcommand() == 'tier') {
@@ -56,12 +56,12 @@ module.exports = {
                 fs.writeFileSync(process.env.BLASTER_DB_FILE, dbJSON, "utf-8");
                 await interaction.reply('Updated **' + db[index].name + '** from tier **' + oldTier + '** to tier **' + interaction.options.getInteger('tier') + '**!');
             } else {
-                await interaction.reply('**' + db[index].name + '** is already in the database as a tier **' + interaction.options.getInteger('tier') + '** blaster!');
+                await interaction.reply({content: '**' + db[index].name + '** is already in the database as a tier **' + interaction.options.getInteger('tier') + '** blaster!', ephemeral: true});
             }
         } else if (interaction.options.getSubcommand() == 'name') {
             const existCheck = db.findIndex((blast) => blast.name.toLowerCase() == interaction.options.getString('new_name').trim().toLowerCase());
             if (existCheck != -1) {
-                await interaction.reply('**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster!');
+                await interaction.reply({content: '**' + db[existCheck].name + '** is already in the database as a tier **' + db[existCheck].tier + '** blaster!', ephemeral: true});
                 return;
             }
             oldName = db[index].name;

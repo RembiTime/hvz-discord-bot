@@ -1,7 +1,7 @@
 const { EmbedBuilder } = require('discord.js');
 const dotenv = require('dotenv');
 const fs = require('node:fs');
-const approvalChannelID = '1222008392583745588';
+const approvalChannelID = process.env.APPROVAL_CHANNEL_ID;
 
 function changeTier(inBlastDB, index, tier) {
 	if (inBlastDB) {
@@ -214,15 +214,30 @@ function autocompleteSearch(interaction) {
     let filtered = choices.filter(x => splitWords.every(word => x.toLowerCase().includes(word.toLowerCase()))).slice(0, 25);
     //const filtered = choices.filter(choice => choice.split(" ").forEach((blastWord) => blastWord.startsWith(focusedValue)));
     
-    return filtered.map(choice => ({ name: choice, value: choice }))
+    return filtered.map(choice => ({ name: choice, value: choice }));
 }
 
-function getPendingRequests(bot) {
+function autocompleteCaseID(interaction) {
+    let modJSON = fs.readFileSync(process.env.MOD_DB_FILE);
+    let mod = JSON.parse(modJSON);
+    const focusedValue = interaction.options.getFocused();
+    const choices = mod.map((blaster) => blaster.caseID);
+    const filtered = choices.filter(choice => choice.startsWith(focusedValue)).filter((value, index) => choices.indexOf(value) == index);
+    return filtered.map(choice => ({ name: choice, value: choice }));
+}
+
+async function getPendingRequests() {
+
     let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
     let db = JSON.parse(dbJSON);
-    const blasters = db.filter(blaster => blaster.tier == -1).reduce((arr, blaster) => arr.push({name: blaster.date, value: "[" + blaster.name + "](" + bot.guild.channels.cache.get(approvalChannelID).messages.cache.get(blaster.messageID).url + ")"}));
+    const blasters = db.filter(blaster => blaster.tier == -1).reduce((arr, blaster) => {arr.push({name: blaster.date, value: "[" + blaster.name + "](https://discord.com/channels/" + process.env.BGC_GUILD_ID + "/" + approvalChannelID + "/" + blaster.messageID + ")", inline: true}); return arr;}, []);
     const embed = new EmbedBuilder()
         .setColor("#ff6700")
+        .setTitle("The Daily Round-Up")
+        .setDescription("Y'all better get approvin'")
+        .addFields(blasters)
+    
+    return embed;
 }
 
-module.exports = {decisionReached, autocompleteSearch};
+module.exports = {decisionReached, autocompleteSearch, autocompleteCaseID, getPendingRequests};

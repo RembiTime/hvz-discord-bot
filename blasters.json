@@ -451,7 +451,7 @@
     },
     {
         "name": "Nerf MicroShots Minecraft Snow Golem",
-        "tier": -1,
+        "tier": 2,
         "caseID": "rps128",
         "userID": "224652587507384320",
         "messageID": "1222397677996609567",

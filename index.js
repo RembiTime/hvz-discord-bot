@@ -4,8 +4,10 @@ dotenv.config();
 const fs = require('node:fs');
 const path = require('node:path');
 const lib = require("./lib.js");
+const cron = require('node-cron');
 
-let coreRoleID = '585598775805083660'
+const approvalChannelID = process.env.APPROVAL_CHANNEL_ID;
+let coreRoleID = process.env.CORE_ROLE_ID;
 let unanimousCapacity = 3;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildMembers, GatewayIntentBits.MessageContent], partials: [Partials.Message, Partials.Channel, Partials.Reaction] });
@@ -28,9 +30,17 @@ for (const folder of commandFolders) {
 	}
 }
 
-client.once(Events.ClientReady, readyClient => {
+client.once(Events.ClientReady, async readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
 	client.user.setPresence({ activities: [{ name: 'I cast Eldritch Blast(er)!', type: ActivityType.Custom }], status: 'online' });
+
+	cron.schedule('0 19 * * *', async () => { // runs at 7pm every day
+		console.log("Running the daily round up...")
+		const approvalChannel = await client.guilds.cache.get(process.env.BGC_GUILD_ID).channels.fetch(approvalChannelID);
+		approvalChannel.send({embeds: [(await lib.getPendingRequests(client))]});
+	}, {
+		timezone: "America/New_York"
+	});
 });
 
 client.on(Events.InteractionCreate, async interaction => {
