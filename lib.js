@@ -81,17 +81,17 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
             case 2:
                 const embed2 = new EmbedBuilder(msg.embeds[0])
                     .setColor('#008e44')
-                    .setTitle('CONDITIONALLY APPROVED? - TIER 2')
+                    .setTitle('CONDITIONALLY APPROVED - TIER 2')
                 msg.edit({ embeds: [embed2] });
                 
                 changeTier(inBlastDB, index, 2);
                 switchFromBlastToMod(index);
-                author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **2**., meaning you may only use it during missions. This is a ruling specifically for you, so others can't use it unless they request it too.");
+                author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for tier **2**, meaning you may only use it during missions. This is a ruling specifically for you, so others can't use it unless they request it too.");
                 break;
             case 3:
                 const embed3 = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#008e44')
-                    .setTitle('CONDITIONALLY APPROVED? - TIER 3')
+                    .setColor('#f93a2f')
+                    .setTitle('CONDITIONALLY DECIDED - TIER 3')
                 msg.edit({ embeds: [embed3] });
                 
                 changeTier(inBlastDB, index, 3);
@@ -121,14 +121,14 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
             case 1:
                 if (inBlastDB) {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#00d166')
-                    .setTitle('BLASTER APPROVED - TIER 1')
+                        .setColor('#00d166')
+                        .setTitle('BLASTER APPROVED - TIER 1')
                     msg.edit({ embeds: [embed] });
                     author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **1**, meaning you may use it any time!");
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#008e44')
-                    .setTitle('MODIFICATION APPROVED - TIER 1')
+                        .setColor('#008e44')
+                        .setTitle('MODIFICATION APPROVED - TIER 1')
                     msg.edit({ embeds: [embed] });
                     author.send("The modification for the following image has been **approved** for tier **1**, meaning you may use it any time! " + goToDB[index].image);
                 }
@@ -138,14 +138,14 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
             case 2:
                 if (inBlastDB) {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#00d166')
-                    .setTitle('BLASTER APPROVED? - TIER 2')
+                        .setColor('#00d166')
+                        .setTitle('BLASTER APPROVED - TIER 2')
                     msg.edit({ embeds: [embed] });
                     author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **2**, meaning you may only use it during missions.");
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#008e44')
-                    .setTitle('MODIFICATION APPROVED? - TIER 2')
+                        .setColor('#008e44')
+                        .setTitle('MODIFICATION APPROVED - TIER 2')
                     msg.edit({ embeds: [embed] });
                     author.send("The modification for the following image has been **approved** for tier **2**, meaning you may only use it during missions. " + goToDB[index].image);
                 }
@@ -155,14 +155,14 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
             case 3:
                 if (inBlastDB) {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#00d166')
-                    .setTitle('BLASTER APPROVED? - TIER 3')
+                        .setColor('#f93a2f')
+                        .setTitle('BLASTER DECIDED - TIER 3')
                     msg.edit({ embeds: [embed] });
                     author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **3**, meaning this blaster can **not** be used for Humans vs. Zombies.");
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#008e44')
-                    .setTitle('MODIFICATION APPROVED? - TIER 3')
+                        .setColor('#f93a2f')
+                        .setTitle('MODIFICATION DECIDED - TIER 3')
                     msg.edit({ embeds: [embed] });
                     author.send("The modification for the following image has been **approved** for tier **3**, meaning this blaster can **not** be used for Humans vs. Zombies. " + goToDB[index].image);
                 }
@@ -172,14 +172,14 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
             case 4:
                 if (inBlastDB) {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#f93a2f')
-                    .setTitle('BLASTER DENIED')
+                        .setColor('#f93a2f')
+                        .setTitle('BLASTER DENIED')
                     msg.edit({ embeds: [embed] });
                     author.send("The blaster **" + goToDB[index].name +"** has been **denied** for play. Please don't use it.");
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#f93a2f')
-                    .setTitle('MODIFICATION DENIED')
+                        .setColor('#f93a2f')
+                        .setTitle('MODIFICATION DENIED')
                     msg.edit({ embeds: [embed] });
                     author.send("The modification for the following image has been **denied** for play. Please don't use it. " + goToDB[index].image);
                 }
@@ -189,13 +189,13 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
             case 5:
                 if (inBlastDB) {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#a62019')
-                    .setTitle('BLASTER APPROVAL DELETED')
+                        .setColor('#a62019')
+                        .setTitle('BLASTER APPROVAL DELETED')
                     msg.edit({ embeds: [embed] });
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
-                    .setColor('#a62019')
-                    .setTitle('MODIFICATION APPROVAL DELETED')
+                        .setColor('#a62019')
+                        .setTitle('MODIFICATION APPROVAL DELETED')
                     msg.edit({ embeds: [embed] });
                 }
 
@@ -210,11 +210,19 @@ function autocompleteSearch(interaction) {
     let db = JSON.parse(dbJSON);
     const focusedValue = interaction.options.getFocused();
     const choices = db.map((blaster) => blaster.name);
-    const splitWords = focusedValue.split(" ")
+    const splitWords = focusedValue.split(" ");
     let filtered = choices.filter(x => splitWords.every(word => x.toLowerCase().includes(word.toLowerCase()))).slice(0, 25);
     //const filtered = choices.filter(choice => choice.split(" ").forEach((blastWord) => blastWord.startsWith(focusedValue)));
     
     return filtered.map(choice => ({ name: choice, value: choice }))
+}
+
+function getPendingRequests(bot) {
+    let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
+    let db = JSON.parse(dbJSON);
+    const blasters = db.filter(blaster => blaster.tier == -1).reduce((arr, blaster) => arr.push({name: blaster.date, value: "[" + blaster.name + "](" + bot.guild.channels.cache.get(approvalChannelID).messages.cache.get(blaster.messageID).url + ")"}));
+    const embed = new EmbedBuilder()
+        .setColor("#ff6700")
 }
 
 module.exports = {decisionReached, autocompleteSearch};
