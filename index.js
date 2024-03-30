@@ -36,8 +36,11 @@ client.once(Events.ClientReady, async readyClient => {
 
 	cron.schedule('0 19 * * *', async () => { // runs at 7pm every day
 		console.log("Running the daily round up...")
-		const approvalChannel = await client.guilds.cache.get(process.env.BGC_GUILD_ID).channels.fetch(approvalChannelID);
-		approvalChannel.send({embeds: [(await lib.getPendingRequests(client))]});
+		const roundup = await lib.getPendingRequests();
+		if (roundup !== false) {
+			const approvalChannel = await client.guilds.cache.get(process.env.BGC_GUILD_ID).channels.fetch(approvalChannelID);
+			approvalChannel.send({embeds: [roundup]});
+		}
 	}, {
 		timezone: "America/New_York"
 	});

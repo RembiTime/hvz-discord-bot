@@ -231,6 +231,9 @@ async function getPendingRequests() {
     let dbJSON = fs.readFileSync(process.env.BLASTER_DB_FILE);
     let db = JSON.parse(dbJSON);
     const blasters = db.filter(blaster => blaster.tier == -1).reduce((arr, blaster) => {arr.push({name: blaster.date, value: "[" + blaster.name + "](https://discord.com/channels/" + process.env.BGC_GUILD_ID + "/" + approvalChannelID + "/" + blaster.messageID + ")", inline: true}); return arr;}, []);
+    if (blasters.length === 0) {
+        return false;
+    }
     const embed = new EmbedBuilder()
         .setColor("#ff6700")
         .setTitle("The Daily Round-Up")
