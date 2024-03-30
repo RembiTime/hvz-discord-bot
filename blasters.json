@@ -504,15 +504,6 @@
         "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1223329525832876145/latest.png?ex=66197567&is=66070067&hm=d8d2869609f3cd38e28625819c7992402a0a5bf5bd8eb02095104c03be54c23b&"
     },
     {
-        "name": "Nerf Rival Hypnos",
-        "tier": -1,
-        "caseID": "kct33",
-        "userID": "404382385384456214",
-        "messageID": "1223356947542052934",
-        "date": "3/29/2024",
-        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1223356942425264169/81tB03pXd7L._AC_SL1500_.jpg?ex=66198eef&is=660719ef&hm=9acbf2514ab4a79a15f118297ae61b472a40c25c4f01b2b37c1ebc34a2678314&"
-    },
-    {
         "name": "Nerf Elite 2.0 Trio SD-3",
         "tier": -1,
         "caseID": "taz24",
@@ -520,5 +511,14 @@
         "messageID": "1223360796357300235",
         "date": "3/29/2024",
         "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1223360793098064004/trio.jpg?ex=66199286&is=66071d86&hm=d694525d040859833cc0c3187af5099d4be496c5b4ec0000a4a6976d3e8d0321&"
+    },
+    {
+        "name": "Nerf Rebelle Fair Fortune Crossbow",
+        "tier": 1,
+        "caseID": "aed134",
+        "userID": "618433466597376016",
+        "messageID": "1223462934366261401",
+        "date": "3/29/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1223462930306306109/Screenshot_20240329-224410_Google.jpg?ex=6619f1a5&is=66077ca5&hm=1c4a1d19af0675d276505a748df6a9a1676ca9d61d6add2628f9e67ce4f1a91f&"
     }
 ]

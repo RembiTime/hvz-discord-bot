@@ -114,13 +114,13 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 		reactions = [];
 		reaction.message.reactions.cache.forEach(react => {
 			reactions.push({name: react._emoji.name, count: react.count - 1});
-			if (!(reaction.count-1 >= (react.count-1) * 4) && reaction.emoji.name != react._emoji.name && reaction.emoji.name != "*️⃣") {
+			if (!(reaction.count-1 >= (react.count-1) * 4) && reaction.emoji.name != react._emoji.name && react._emoji.name != "*️⃣") {
 				reactionHasOverThreeQuarters = false;
 			}
 		});
 
 		await reaction.message.guild.members.fetch(); // cache all users (so it can find how many are in core)
-		let numCore = await reaction.message.guild.roles.cache.get(coreRoleID).members.size;
+		let numCore = reaction.message.guild.roles.cache.get(coreRoleID).members.size;
 		let author = reaction.message.guild.members.cache.get(goToDB[index].userID);
 
 		let consensusReached = false;
@@ -140,6 +140,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 				isConditional = true;
 			}
 		}
+		
 		if (consensusReached) {
 			switch (reaction.emoji.name) {
 				case "1️⃣": lib.decisionReached(reaction.message, inBlastDB, goToDB, index, author, 1, isConditional); break;
