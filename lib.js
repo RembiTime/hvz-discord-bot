@@ -124,6 +124,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                         .setColor('#00d166')
                         .setTitle('BLASTER APPROVED - TIER 1')
                     msg.edit({ embeds: [embed] });
+                    msg.react('📊');
                     author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **1**, meaning you may use it any time!");
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
@@ -141,6 +142,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                         .setColor('#00d166')
                         .setTitle('BLASTER APPROVED - TIER 2')
                     msg.edit({ embeds: [embed] });
+                    msg.react('📊');
                     author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **2**, meaning you may only use it during missions.");
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
@@ -158,6 +160,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                         .setColor('#f93a2f')
                         .setTitle('BLASTER DECIDED - TIER 3')
                     msg.edit({ embeds: [embed] });
+                    msg.react('📊');
                     author.send("The blaster **" + goToDB[index].name +"** has been **approved** for tier **3**, meaning this blaster can **not** be used for Humans vs. Zombies.");
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
@@ -175,6 +178,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                         .setColor('#f93a2f')
                         .setTitle('BLASTER DENIED')
                     msg.edit({ embeds: [embed] });
+                    msg.react('📊');
                     author.send("The blaster **" + goToDB[index].name +"** has been **denied** for play. Please don't use it.");
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
