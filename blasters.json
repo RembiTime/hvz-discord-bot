@@ -520,5 +520,50 @@
         "messageID": "1223462934366261401",
         "date": "3/29/2024",
         "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1223462930306306109/Screenshot_20240329-224410_Google.jpg?ex=6619f1a5&is=66077ca5&hm=1c4a1d19af0675d276505a748df6a9a1676ca9d61d6add2628f9e67ce4f1a91f&"
+    },
+    {
+        "name": "Air Warriors The Walking Dead Andrea's Rifle",
+        "tier": 2,
+        "caseID": "axm1554",
+        "userID": "724435959151722557",
+        "messageID": "1223608616813072404",
+        "date": "3/30/2024",
+        "image": "https://media.discordapp.net/ephemeral-attachments/1222331043705655331/1223608610937114634/IMG_2499.jpg?ex=661a7952&is=66080452&hm=6d17fcea6e591ea942f7d0ab89433c5b701144aba56582ba1cf572313801f5c4&=&format=webp&width=710&height=946"
+    },
+    {
+        "name": "Nerf DinoSquad ArmorStrike",
+        "tier": 1,
+        "caseID": "bac156",
+        "userID": "394986543774957569",
+        "messageID": "1223689548383391755",
+        "date": "3/30/2024",
+        "image": "https://media.discordapp.net/ephemeral-attachments/1222331043705655331/1223689543522193490/IMG_8421.png?ex=661ac4b2&is=66084fb2&hm=9253e6547966484e80121c012f4e0f8f63215582cfc98f854a4dc30a7923775e&=&format=webp&quality=lossless&width=1114&height=946"
+    },
+    {
+        "name": "Nerf Rival Flex XXI-100",
+        "tier": 1,
+        "caseID": "zjb15",
+        "userID": "190560714253926401",
+        "messageID": "1224004831274995853",
+        "date": "3/31/2024",
+        "image": "https://media.discordapp.net/ephemeral-attachments/1222331043705655331/1224004825545576499/20240331_103634.jpg?ex=661bea53&is=66097553&hm=f4c74bad72a5e73af45e73eeda5fc35f7203974291d5684b81b9ba39112ba52f&=&format=webp&width=710&height=946"
+    },
+    {
+        "name": "Surgefire",
+        "tier": -1,
+        "caseID": "dta26",
+        "userID": "735682507336581161",
+        "messageID": "1224083683300868200",
+        "date": "3/31/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224083677231714364/IMG_4740.jpg?ex=661c33c3&is=6609bec3&hm=7782ef20178ee0c6fd8172cfacfd577bd92f57324dbaab20e6a714cfa581b20c&"
+    },
+    {
+        "name": "nerf arrowstorm",
+        "tier": -1,
+        "caseID": "mmz34",
+        "userID": "735682507336581161",
+        "messageID": "1224084056791187577",
+        "date": "3/31/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224084050931617943/IMG_4741.jpg?ex=661c341c&is=6609bf1c&hm=951e5d75a839967c06ff14b29dc275ebee12e19c316f01341091c2e5489b9169&"
     }
 ]

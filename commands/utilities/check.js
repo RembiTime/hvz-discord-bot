@@ -121,7 +121,7 @@ module.exports = {
 
             db.push(toAdd);
             dbJSON = JSON.stringify(db, null, 4);
-            fs.writeFileSync(process.env.BLASTER_DB_FILE, dbJSON, "utf-8"); 
+            fs.writeFileSync(process.env.MOD_DB_FILE, dbJSON, "utf-8"); 
 
             msg.react('1️⃣');
             msg.react('2️⃣');
