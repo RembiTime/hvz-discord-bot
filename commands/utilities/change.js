@@ -54,7 +54,14 @@ module.exports = {
                 db[index].tier = interaction.options.getInteger('tier');
                 dbJSON = JSON.stringify(db, null, 4);
                 fs.writeFileSync(process.env.BLASTER_DB_FILE, dbJSON, "utf-8");
-                await interaction.reply('Updated **' + db[index].name + '** from tier **' + oldTier + '** to tier **' + interaction.options.getInteger('tier') + '**!');
+                let tier = "";
+                if (interaction.options.getInteger('tier') == 4) {
+                    tier = "BANNED";
+                } else {
+                    tier = interaction.options.getInteger('tier');
+                }
+                await interaction.reply('Updated **' + db[index].name + '** from tier **' + oldTier + '** to tier **' + tier + '**!');
+                (await interaction.guild.members.fetch(db[index].userID)).send("Your blaster **" + db[index].name + "** has been changed to a tier **" + interaction.options.getInteger('tier') + "** blaster.");
             } else {
                 await interaction.reply({content: '**' + db[index].name + '** is already in the database as a tier **' + interaction.options.getInteger('tier') + '** blaster!', ephemeral: true});
             }

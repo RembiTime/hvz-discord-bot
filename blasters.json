@@ -549,8 +549,8 @@
         "image": "https://media.discordapp.net/ephemeral-attachments/1222331043705655331/1224004825545576499/20240331_103634.jpg?ex=661bea53&is=66097553&hm=f4c74bad72a5e73af45e73eeda5fc35f7203974291d5684b81b9ba39112ba52f&=&format=webp&width=710&height=946"
     },
     {
-        "name": "Surgefire",
-        "tier": -1,
+        "name": "Nerf N-Strike Elite SurgeFire",
+        "tier": 1,
         "caseID": "dta26",
         "userID": "735682507336581161",
         "messageID": "1224083683300868200",
@@ -558,12 +558,21 @@
         "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224083677231714364/IMG_4740.jpg?ex=661c33c3&is=6609bec3&hm=7782ef20178ee0c6fd8172cfacfd577bd92f57324dbaab20e6a714cfa581b20c&"
     },
     {
-        "name": "nerf arrowstorm",
-        "tier": -1,
+        "name": "Nerf Arrowstorm",
+        "tier": 1,
         "caseID": "mmz34",
         "userID": "735682507336581161",
         "messageID": "1224084056791187577",
         "date": "3/31/2024",
         "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224084050931617943/IMG_4741.jpg?ex=661c341c&is=6609bf1c&hm=951e5d75a839967c06ff14b29dc275ebee12e19c316f01341091c2e5489b9169&"
+    },
+    {
+        "name": "Nerf Elite 2.0 Motoblitz",
+        "tier": -1,
+        "caseID": "yxx705.",
+        "userID": "885943704341323816",
+        "messageID": "1224085951966609598",
+        "date": "3/31/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224085946547572887/IMG_1579.png?ex=661c35e0&is=6609c0e0&hm=43af893953a5126ddaaf4841ba6afec61ca3514b8ee00df2ef839311c0d82182&"
     }
 ]

@@ -8,7 +8,7 @@ const cron = require('node-cron');
 
 const approvalChannelID = process.env.APPROVAL_CHANNEL_ID;
 let coreRoleID = process.env.CORE_ROLE_ID;
-let unanimousCapacity = 3;
+let unanimousCapacity = 5;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions, GatewayIntentBits.GuildMembers, GatewayIntentBits.MessageContent], partials: [Partials.Message, Partials.Channel, Partials.Reaction] });
 
