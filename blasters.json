@@ -127,7 +127,7 @@
     },
     {
         "name": "Nerf Rival Nemesis",
-        "tier": 1,
+        "tier": 2,
         "caseID": "sheet",
         "userID": "",
         "messageID": "",
@@ -235,7 +235,7 @@
     },
     {
         "name": "Nerf Rival Hera",
-        "tier": 2,
+        "tier": 1,
         "caseID": "sheet",
         "userID": "",
         "messageID": "",
@@ -243,7 +243,7 @@
         "image": "https://static.wikia.nocookie.net/nerf/images/3/3e/HeraMXVII1200.jpg/revision/latest/scale-to-width-down/1000?cb=20180422045637"
     },
     {
-        "name": "Rival Takedown",
+        "name": "Nerf Rival Takedown",
         "tier": 2,
         "caseID": "sheet",
         "userID": "",
@@ -252,7 +252,7 @@
         "image": "https://static.wikia.nocookie.net/nerf/images/d/d9/TakedownXX800.jpg/revision/latest/scale-to-width-down/1000?cb=20191211132128"
     },
     {
-        "name": "Rival Perses",
+        "name": "Nerf Rival Perses",
         "tier": 2,
         "caseID": "sheet",
         "userID": "",
@@ -415,7 +415,7 @@
     },
     {
         "name": "Nerf MicroShots Minecraft Ender Dragon",
-        "tier": -1,
+        "tier": 2,
         "caseID": "rps128",
         "userID": "224652587507384320",
         "messageID": "1222395760226734120",
@@ -505,7 +505,7 @@
     },
     {
         "name": "Nerf Elite 2.0 Trio SD-3",
-        "tier": -1,
+        "tier": 3,
         "caseID": "taz24",
         "userID": "186565223996456960",
         "messageID": "1223360796357300235",
@@ -568,11 +568,398 @@
     },
     {
         "name": "Nerf Elite 2.0 Motoblitz",
-        "tier": -1,
+        "tier": 1,
         "caseID": "yxx705.",
         "userID": "885943704341323816",
         "messageID": "1224085951966609598",
         "date": "3/31/2024",
         "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224085946547572887/IMG_1579.png?ex=661c35e0&is=6609c0e0&hm=43af893953a5126ddaaf4841ba6afec61ca3514b8ee00df2ef839311c0d82182&"
+    },
+    {
+        "name": "X-Shot Last Stand - Game Over",
+        "tier": 2,
+        "caseID": "mty12",
+        "userID": "441383779743956993",
+        "messageID": "1224090424805949692",
+        "date": "3/31/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224090417470111804/X-Shot_Last_Stand.jpeg?ex=661c3a0a&is=6609c50a&hm=90085a7a4a99116e9a270c0db645ca1c0bbf76e5c25fc198ff21b830e8a627d3&"
+    },
+    {
+        "name": "Nerf N-Strike Elite Triad EX-3",
+        "tier": 2,
+        "caseID": "mty12",
+        "userID": "441383779743956993",
+        "messageID": "1224091577245237278",
+        "date": "3/31/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224091573210447902/Nerf_Triad.jpeg?ex=661c3b1d&is=6609c61d&hm=02453bf2508890b5637bb6522df9f8655c34c19d332ccf4f5740095569e0cf8e&"
+    },
+    {
+        "name": "Nerf Rival Challenger",
+        "tier": 2,
+        "caseID": "txc469",
+        "userID": "334742317405700109",
+        "messageID": "1224148904782860388",
+        "date": "3/31/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224148898897989642/Screenshot_20240331_201031_Google.jpg?ex=661c7081&is=6609fb81&hm=060aede3216eb766c57be63126d0d273c1cf8e6481301436ae69df2138273300&"
+    },
+    {
+        "name": "Nerf N-Strike Elite Deploy",
+        "tier": 1,
+        "caseID": "rmr140",
+        "userID": "510904584835956780",
+        "messageID": "1224156635090391131",
+        "date": "3/31/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224156629805568020/IMG_0748.jpg?ex=661c77b4&is=660a02b4&hm=6ed4b75c18aa899dc6a5265d8208dd4b08737a76e3eda379d2be69b962b967b1&"
+    },
+    {
+        "name": "Nerf Vortex Nitron",
+        "tier": 1,
+        "caseID": "rmr140",
+        "userID": "510904584835956780",
+        "messageID": "1224158026068398080",
+        "date": "3/31/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224158018988412939/IMG_0749.jpg?ex=661c78ff&is=660a03ff&hm=ec13a359312f34e3b92b6c770701a8ca7e391f0c1517339c4c914438319c6736&"
+    },
+    {
+        "name": "NERF zombie strike slingfire with reinforced lever",
+        "tier": 2,
+        "caseID": "ame125",
+        "userID": "265285376451543041",
+        "messageID": "1224173549711786025",
+        "date": "3/31/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224173543273664603/20240331_214611.jpg?ex=661c8774&is=660a1274&hm=50df152af6d0c2f7afbca59d113330c828e7cbba26652ad0a6a7fdb24cdc56d3&"
+    },
+    {
+        "name": "Nerf Elite 2.0 Commander RD-6",
+        "tier": 1,
+        "caseID": "eae67",
+        "userID": "707371738912129156",
+        "messageID": "1224400660095701014",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224400656362766477/E883402E-46E0-4EB7-A041-F8BD0E225C87_1_105_c.jpeg?ex=661d5af8&is=660ae5f8&hm=51cc1bd738d3b901cc25bd0e7248590db2e68cd391f83176443c86c4b7fdea0c&"
+    },
+    {
+        "name": "Nerf Mega XL DoubleCrusher",
+        "tier": 1,
+        "caseID": "eae67",
+        "userID": "707371738912129156",
+        "messageID": "1224400839137824962",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224400832246583386/437BE5E2-AF44-4C3A-85F5-72D2E9FB7F98_1_105_c.jpeg?ex=661d5b22&is=660ae622&hm=9b707593c68c15793de943603e4fc07aa7939c50cb8476c713396a1ee824df1d&"
+    },
+    {
+        "name": "Worker Nightengale",
+        "tier": 4,
+        "caseID": "dmb236",
+        "userID": "378948976226992138",
+        "messageID": "1224408445072048198",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224408439871242290/616bF4vnQ5L.png?ex=661d6238&is=660aed38&hm=898be896aa01c537bf50d45091f00490c67eced38211a9f9d3a245bd7be17283&"
+    },
+    {
+        "name": "Marvel NERF Spider-Man Miles Morales Thwip-Tech Blaster",
+        "tier": 1,
+        "caseID": "eae67",
+        "userID": "707371738912129156",
+        "messageID": "1224408605042937957",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224408600600907837/Screenshot_2024-04-01_at_1.22.12_PM.png?ex=661d625e&is=660aed5e&hm=1d01b85683ca3d61ee9232ba46d1dfe224d3b78d2603b528b9b1584468a850a7&"
+    },
+    {
+        "name": "Nerf Ultra Strike",
+        "tier": 3,
+        "caseID": "xxy592",
+        "userID": "804567518650957859",
+        "messageID": "1224441635966816328",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224441629675491520/IMG_8109.jpg?ex=661d8121&is=660b0c21&hm=ba73f3d48c7052d5efc42bf8b32b1b91b8fb92b8c4e3e49ddd960a6a9d1c9683&"
+    },
+    {
+        "name": "Nerf Elite 2.0 Eaglepoint RD-8",
+        "tier": 1,
+        "caseID": "xxy592",
+        "userID": "804567518650957859",
+        "messageID": "1224442059243393037",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224442053232951318/IMG_8110.jpg?ex=661d8186&is=660b0c86&hm=0699823282d546c69d565730f290e54f57f912dce7cb00a0d010ea84851101da&"
+    },
+    {
+        "name": "Adventure Force Equalizer",
+        "tier": 2,
+        "caseID": "xxy592",
+        "userID": "804567518650957859",
+        "messageID": "1224443319468425246",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224443313076306012/IMG_8111.jpg?ex=661d82b2&is=660b0db2&hm=aee5ccee5266d7c19d3a6691ce3a061acd2deb9256f04d12fa49129467362ccd&"
+    },
+    {
+        "name": "Nerf Doomlands Double-Dealer",
+        "tier": 1,
+        "caseID": "jas763",
+        "userID": "518227387117207573",
+        "messageID": "1224502244586815630",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224502238337040433/IMG_9818.jpg?ex=661db993&is=660b4493&hm=8dc35b8d780b20e34ce5c5263473fde8b15de47ee3aa2666ab16468c059d12d3&"
+    },
+    {
+        "name": "Nerf Zombie Strike Crossfire",
+        "tier": 1,
+        "caseID": "taz24",
+        "userID": "186565223996456960",
+        "messageID": "1224502401147342933",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224502397808672788/9k.jpg?ex=661db9b9&is=660b44b9&hm=4de269b5686d0f169b01ac1eba1a06fb1575701d8685282abdbff34bc86ccbb3&"
+    },
+    {
+        "name": "Nerf Elite Junior Racer Easy Play",
+        "tier": 1,
+        "caseID": "mtp57",
+        "userID": "1224077268335460412",
+        "messageID": "1224503940889182258",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224503935444844607/IMG_9450.jpg?ex=661dbb28&is=660b4628&hm=5d9e48668a481915e53df6be73eb8fcb36d19aca276bd37e13bd328b7112baaa&"
+    },
+    {
+        "name": "Nerf Alpha Strike Cobra RC-6",
+        "tier": 2,
+        "caseID": "efj24",
+        "userID": "746808867341598791",
+        "messageID": "1224510343233929341",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224510338800681040/20240401_200524.jpg?ex=661dc11f&is=660b4c1f&hm=ee367717d61438351a41c11524135394d04c9e80e8f60162148227e8aa791a3e&"
+    },
+    {
+        "name": "Aevdor Tactical Grenade",
+        "tier": 4,
+        "caseID": "ear141",
+        "userID": "837478141173170231",
+        "messageID": "1224525061789061131",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224525057317929092/71ud9au8uhL.png?ex=661dced4&is=660b59d4&hm=128a12329dc90ea9326127dfea0796cf0063ee662ef2e2d78446c58a66478e4a&"
+    },
+    {
+        "name": "Nerf Halo Needler",
+        "tier": 1,
+        "caseID": "nrl46",
+        "userID": "408399478542958613",
+        "messageID": "1224526565174415490",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224526561198342246/71cep39Ub8L._AC_SL1500_.jpg?ex=661dd03a&is=660b5b3a&hm=e00f0c908a89cd6375c306081c42e2c74449af8edda09185e57f856d571ee3d6&"
+    },
+    {
+        "name": "NERF MicroShots Dungeons & Dragons Palarandusk",
+        "tier": 1,
+        "caseID": "ear141",
+        "userID": "837478141173170231",
+        "messageID": "1224526640160440432",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224526635580264478/719N7cUgU9L.png?ex=661dd04c&is=660b5b4c&hm=81db4339d43af845750e7320fab18582988ceb3e14a86521d9d4635e75218b97&"
+    },
+    {
+        "name": "Nerf Destiny Gjallarhorn",
+        "tier": 1,
+        "caseID": "ear141",
+        "userID": "837478141173170231",
+        "messageID": "1224529824966643774",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224529821640556698/s-l1600.png?ex=661dd344&is=660b5e44&hm=86fa0b716bb6ffb8f20dbf32ff7630214183f590a3635c72f15321a7deaa44f9&"
+    },
+    {
+        "name": "Nerf Minecraft Heartstealer",
+        "tier": 1,
+        "caseID": "nrl46",
+        "userID": "408399478542958613",
+        "messageID": "1224532301577453668",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224532297987002408/ezgif-7-d091ec7b32.jpg?ex=661dd592&is=660b6092&hm=6f735350121c78c3572e7747247b7d10a8a1619c8b23b267018085b5424cbb03&"
+    },
+    {
+        "name": "NERF Scooter",
+        "tier": 4,
+        "caseID": "ear141",
+        "userID": "837478141173170231",
+        "messageID": "1224533049828446240",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224533046385049601/s-l960.png?ex=661dd644&is=660b6144&hm=05e13c3fb35a30aa170b8c0d5e7f042bc6cc56cdc908f6f6696d987a0eb54723&"
+    },
+    {
+        "name": "NERF Dog Tennis Ball Launcher",
+        "tier": 4,
+        "caseID": "ear141",
+        "userID": "837478141173170231",
+        "messageID": "1224535092769329262",
+        "date": "4/1/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224535087631044699/91W1im1j8-L.png?ex=661dd82b&is=660b632b&hm=1e5df33439dabe4c8bd6ce1ff8787ea3c0d5e7dafab00626d5f13330843a3022&"
+    },
+    {
+        "name": "Dart Zone Magnum X2",
+        "tier": 1,
+        "caseID": "abt46",
+        "userID": "612336634909818883",
+        "messageID": "1224722714628194455",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224722710798798968/IMG_1960.png?ex=661e86e8&is=660c11e8&hm=97fc237477237439ae7e47ea6cc727958afeb24c422d0e1362399fde0123ad18&"
+    },
+    {
+        "name": "Adventure Force V-Twin",
+        "tier": 1,
+        "caseID": "ddg43",
+        "userID": "632971562391437373",
+        "messageID": "1224874127857418330",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224874116738318356/IMG_3733.jpg?ex=661f13ea&is=660c9eea&hm=d110332a7e810fdec5e5017bf92372736e5a0ece13a7ee41f58ac49b78240bb5&"
+    },
+    {
+        "name": "Nerf Dart Tag Furyfire",
+        "tier": 1,
+        "caseID": "ddg43",
+        "userID": "632971562391437373",
+        "messageID": "1224874461245866089",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224874456451780638/IMG_3734.jpg?ex=661f143b&is=660c9f3b&hm=f492408d797ef860dbf5840d405ee68426152d0be73a7966b2f44e3a441305e7&"
+    },
+    {
+        "name": "Nerf Rival Saturn",
+        "tier": 3,
+        "caseID": "ddg43",
+        "userID": "632971562391437373",
+        "messageID": "1224874732860473486",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224874728108462141/IMG_3737.jpg?ex=661f147c&is=660c9f7c&hm=ef274200e12b3eaa3e14e40a90473662e1c31cd614157f0e51fd430cd8c2402e&"
+    },
+    {
+        "name": "Nerf N-Strike Maverick Rev-6",
+        "tier": 2,
+        "caseID": "ddg43",
+        "userID": "632971562391437373",
+        "messageID": "1224874896413167708",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224874890801184940/IMG_3736.jpg?ex=661f14a3&is=660c9fa3&hm=2194380fa15a74e7031a819d2fec5e9160fb69ba52b9b6c90a8e20e584d1393e&"
+    },
+    {
+        "name": "Nerf Dart Tag Swarmfire",
+        "tier": 1,
+        "caseID": "ddg43",
+        "userID": "632971562391437373",
+        "messageID": "1224875159031382121",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224875153612210278/IMG_3735.jpg?ex=661f14e1&is=660c9fe1&hm=1e4e346b90bdc6101928152ece2dbc57a5bf0fce8b978656bc3c554d913ce972&"
+    },
+    {
+        "name": "Nerf Elite 2.0 Trailblazer",
+        "tier": 2,
+        "caseID": "amt265",
+        "userID": "1090054664071954523",
+        "messageID": "1224886976134647859",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224886969885134878/IMG_4464.jpg?ex=661f1fe2&is=660caae2&hm=777535a7b4e1c76776508efa0a0ea5ce00ec5b652d1c52393c4940ad9270f310&"
+    },
+    {
+        "name": "Nerf N-Strike Jolt",
+        "tier": 2,
+        "caseID": "ajg228",
+        "userID": "354000244431912965",
+        "messageID": "1224888243632214057",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224888238091800749/IMG_0215.jpg?ex=661f2111&is=660cac11&hm=1a81769230a378b06c2bb4377612428ef2ed3440c62891f89ae49f4500f2ec2e&"
+    },
+    {
+        "name": "Nerf Accustrike Alpha Trooper CS-12",
+        "tier": 3,
+        "caseID": "amt265",
+        "userID": "1090054664071954523",
+        "messageID": "1224888428274126929",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224888422078877706/IMG_4467.jpg?ex=661f213d&is=660cac3d&hm=3fa195eb07ac578392bff8be0f907be25952ca7598b6193aa9bdbc0183e1f3ef&"
+    },
+    {
+        "name": "Gokbuy Wrist Web Shooter",
+        "tier": 1,
+        "caseID": "amt265",
+        "userID": "1090054664071954523",
+        "messageID": "1224901082564530266",
+        "date": "4/2/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1224901076394709153/IMG_4472.png?ex=661f2d06&is=660cb806&hm=e981e7590f57239d21c352a0fe74c97188fe1440721c3f0d149e604174d94eb3&"
+    },
+    {
+        "name": "AdventureForce Tactical Strike Jurassic Pro",
+        "tier": 4,
+        "caseID": "amt265",
+        "userID": "1090054664071954523",
+        "messageID": "1225197042251595816",
+        "date": "4/3/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1225197037050658979/IMG_4491.jpg?ex=662040a8&is=660dcba8&hm=de622a2cfe00f5884c6469e275c688bb1cb052b7dff8fd6ec6f1b530cdd6d464&"
+    },
+    {
+        "name": "Nerf Teenage Mutant Ninja Turtles Blaster",
+        "tier": 2,
+        "caseID": "amt265",
+        "userID": "1090054664071954523",
+        "messageID": "1225211634583208037",
+        "date": "4/3/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1225211630560743474/IMG_4494.png?ex=66204e40&is=660dd940&hm=04b7a0ee67f5a0b8ead29b28b19f6476c26fc6f07b75781dab2cb247008e1766&"
+    },
+    {
+        "name": "Toymendous Unicorn Ball Shooter",
+        "tier": 1,
+        "caseID": "amt265",
+        "userID": "1090054664071954523",
+        "messageID": "1225214307789176843",
+        "date": "4/3/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1225214302210887720/IMG_4495.jpg?ex=662050bd&is=660ddbbd&hm=2988578331732e0372426f0c81b5b7865ede8ae891e623fe7281efdd4e7a2447&"
+    },
+    {
+        "name": "bush",
+        "tier": 1,
+        "caseID": "aeo48",
+        "userID": "862105658886324244",
+        "messageID": "1227329986051047545",
+        "date": "4/9/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1227329980250193920/IMG_2160.jpg?ex=6628031d&is=66158e1d&hm=66e5ebcf6070f73721edb05e2866cc732f1194b650639de4fa0f7fd47f1c1035&"
+    },
+    {
+        "name": "Thomas Blueberry Bagel",
+        "tier": 1,
+        "caseID": "lrl47",
+        "userID": "669722532651204627",
+        "messageID": "1227978730635530381",
+        "date": "4/11/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1227978725271015445/IMG_3099.jpg?ex=662a5f4e&is=6617ea4e&hm=9ffdd045aeb26f14a8aba877a561213133ac3e01006230c0628242db67e18478&"
+    },
+    {
+        "name": "Skyler Conley",
+        "tier": 1,
+        "caseID": "scc98",
+        "userID": "735682507336581161",
+        "messageID": "1228842992262185072",
+        "date": "4/13/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1228842987358781561/IMG_4766.jpg?ex=662d8436&is=661b0f36&hm=21fa57e8f01558ccb73a09a2296d38b5348a7334b17d8e62b27a106aec70945a&"
+    },
+    {
+        "name": "aggressive rickrolling",
+        "tier": 1,
+        "caseID": "rch112",
+        "userID": "890361591231578132",
+        "messageID": "1231752730905677915",
+        "date": "4/21/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1231752727189520405/rickroll.gif?ex=66381a1f&is=6625a51f&hm=64ba8975f6810f9bda9482563e653cce80fc76500f395d186127a1257f095c70&"
+    },
+    {
+        "name": "bubble darts!  Don’t worry it is soft tipped",
+        "tier": 1,
+        "caseID": "aeo48",
+        "userID": "862105658886324244",
+        "messageID": "1236437506246049812",
+        "date": "5/4/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1236437500478750801/IMG_2279.jpg?ex=663801a8&is=6636b028&hm=fa98fe071aae0a34645b26bef8177bf84a6bb1db224ba6fc68986742a853d1e6&"
+    },
+    {
+        "name": "Woodtrick.com Bullet Boltcaster",
+        "tier": -1,
+        "caseID": "mxt653",
+        "userID": "376773469909811200",
+        "messageID": "1264986328475631750",
+        "date": "7/22/2024",
+        "image": "https://cdn.discordapp.com/ephemeral-attachments/1222331043705655331/1264986325870837814/IMG_0316.png?ex=669fddd2&is=669e8c52&hm=bb8fb17285fde5a67334906ea3015aebbd842dbd8f65ea4c1b483a57756f473d&"
     }
 ]
