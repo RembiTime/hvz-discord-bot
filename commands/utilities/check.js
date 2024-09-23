@@ -131,6 +131,6 @@ module.exports = {
             msg.react('🗑️');
         }
 
-		await interaction.reply({content: 'Thanks! Your request has been submitted! You\'ll recieve a DM when a decision has been reached.', ephemeral: false});
+		await interaction.reply({content: 'Thanks! Your request has been submitted! You\'ll recieve a DM when a decision has been reached.', ephemeral: true});
 	},
 };

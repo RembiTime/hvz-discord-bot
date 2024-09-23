@@ -32,7 +32,7 @@ for (const folder of commandFolders) {
 
 client.once(Events.ClientReady, async readyClient => {
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
-	client.user.setPresence({ activities: [{ name: 'I cast Eldritch Blast(er)!', type: ActivityType.Custom }], status: 'online' });
+	client.user.setPresence({ activities: [{ name: 'Haunting Yost since 1960', type: ActivityType.Custom }], status: 'online' });
 
 	cron.schedule('0 19 * * *', async () => { // runs at 7pm every day
 		console.log("Running the daily round up...")
