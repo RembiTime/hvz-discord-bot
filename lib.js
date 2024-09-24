@@ -89,7 +89,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                 
                 changeTier(inBlastDB, index, 2);
                 switchFromBlastToMod(index);
-                author.send("The blaster **" + goToDB[index].name +"** is still pending review. Please check back on this later. This is a ruling specifically for you, so others can't use it unless they request it too.")
+                author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for play, meaning you may use it at any time! This is a ruling specifically for you, so others can't use it unless they request it too.")
                     .catch((error) => {
                         console.log("Could not DM " + author.user.username)
                         embed2.setTitle('CONDITIONALLY APPROVED - TIER 2 (Could not DM)')
@@ -166,7 +166,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                         .setColor('#00d166')
                         .setTitle('BLASTER APPROVED - TIER 2')
                     msg.react('📊');
-                    author.send("The blaster **" + goToDB[index].name +"** is still pending review. Please check back on this later. ")
+                    author.send("The blaster **" + goToDB[index].name +"** has been **approved** for play, meaning you may use it any time!")
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('BLASTER APPROVED - TIER 2 (Could not DM)')
@@ -176,7 +176,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                     const embed = new EmbedBuilder(msg.embeds[0])
                         .setColor('#008e44')
                         .setTitle('MODIFICATION APPROVED - TIER 2')
-                    author.send("The modification for the following image is still pending review. Please check back on this later." + goToDB[index].image)
+                    author.send("The modification for the following image has been **approved** for play, meaning you may use it any time! " + goToDB[index].image)
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('MODIFICATION APPROVED - TIER 2 (Could not DM)')

@@ -55,13 +55,18 @@ module.exports = {
                 dbJSON = JSON.stringify(db, null, 4);
                 fs.writeFileSync(process.env.BLASTER_DB_FILE, dbJSON, "utf-8");
                 let tier = "";
-                if (interaction.options.getInteger('tier') == 4) {
-                    tier = "BANNED";
-                } else {
-                    tier = interaction.options.getInteger('tier');
+                if (interaction.options.getInteger('tier') == 4 || interaction.options.getInteger('tier') == 3) {
+                    tier = " **banned";
+                } else if (interaction.options.getInteger('tier') == 1 || interaction.options.getInteger('tier') == 2) {
+                    tier = "n **approved";
                 }
-                await interaction.reply('Updated **' + db[index].name + '** from tier **' + oldTier + '** to tier **' + tier + '**!');
-                (await interaction.guild.members.fetch(db[index].userID)).send("Your blaster **" + db[index].name + "** has been changed to a tier **" + interaction.options.getInteger('tier') + "** blaster.");
+                let addon = ""
+                (await interaction.guild.members.fetch(db[index].userID)).send("Your blaster **" + db[index].name + "** has been changed to to be a" + interaction.options.getInteger('tier') + "** blaster.")
+                    .catch((error) => {
+                        console.log("Could not DM " + author.user.username)
+                        addon = " (Could not DM)"
+                    });
+                await interaction.reply('Updated **' + db[index].name + '** from tier **' + oldTier + '** to tier **' + tier + '**!' + addon);
             } else {
                 await interaction.reply({content: '**' + db[index].name + '** is already in the database as a tier **' + interaction.options.getInteger('tier') + '** blaster!', ephemeral: true});
             }
