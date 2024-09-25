@@ -60,13 +60,14 @@ module.exports = {
                 } else if (interaction.options.getInteger('tier') == 1 || interaction.options.getInteger('tier') == 2) {
                     tier = "n **approved";
                 }
-                let addon = ""
-                (await interaction.guild.members.fetch(db[index].userID)).send("Your blaster **" + db[index].name + "** has been changed to to be a" + interaction.options.getInteger('tier') + "** blaster.")
+                let addon = "";
+                author = await interaction.guild.members.fetch(db[index].userID);
+                await author.send("Your blaster **" + db[index].name + "** has been changed to a" + tier + "** blaster.")
                     .catch((error) => {
                         console.log("Could not DM " + author.user.username)
-                        addon = " (Could not DM)"
+                        addon = " (Could not DM original submitter)"
                     });
-                await interaction.reply('Updated **' + db[index].name + '** from tier **' + oldTier + '** to tier **' + tier + '**!' + addon);
+                await interaction.reply('Updated **' + db[index].name + '** from tier **' + oldTier + '** to tier **' + interaction.options.getInteger('tier') + '**!' + addon);
             } else {
                 await interaction.reply({content: '**' + db[index].name + '** is already in the database as a tier **' + interaction.options.getInteger('tier') + '** blaster!', ephemeral: true});
             }

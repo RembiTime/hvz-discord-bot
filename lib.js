@@ -65,7 +65,7 @@ function switchFromBlastToMod(index) {
 	console.log("Moved " + name + " to modifications")
 }
 
-function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditional = false) {
+async function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditional = false) {
     if (conditional) {
         switch (tier) {
             case 1:
@@ -75,7 +75,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                 
                 changeTier(inBlastDB, index, 1);
                 switchFromBlastToMod(index);
-                author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for play, meaning you may use it at any time! This is a ruling specifically for you, so others can't use it unless they request it too.")
+                await author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for play, meaning you may use it at any time! This is a ruling specifically for you, so others can't use it unless they request it too.")
                     .catch((error) => {
                         console.log("Could not DM " + author.user.username)
                         embed1.setTitle('CONDITIONALLY APPROVED - TIER 1 (Could not DM)')
@@ -89,7 +89,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                 
                 changeTier(inBlastDB, index, 2);
                 switchFromBlastToMod(index);
-                author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for play, meaning you may use it at any time! This is a ruling specifically for you, so others can't use it unless they request it too.")
+                await author.send("The blaster **" + goToDB[index].name +"** has been conditionally **approved** for play, meaning you may use it at any time! This is a ruling specifically for you, so others can't use it unless they request it too.")
                     .catch((error) => {
                         console.log("Could not DM " + author.user.username)
                         embed2.setTitle('CONDITIONALLY APPROVED - TIER 2 (Could not DM)')
@@ -103,7 +103,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                 
                 changeTier(inBlastDB, index, 3);
                 switchFromBlastToMod(index);
-                author.send("The blaster **" + goToDB[index].name +"** has been conditionally **banned** from play, meaning this blaster can **not** be used for Humans vs. Zombies. This means that the blaster might be able to play, but you'll need to talk to someone in core first.")
+                await author.send("The blaster **" + goToDB[index].name +"** has been conditionally **banned** from play, meaning this blaster can **not** be used for Humans vs. Zombies. This means that the blaster might be able to play, but you'll need to talk to someone in core first.")
                     .catch((error) => {
                         console.log("Could not DM " + author.user.username)
                         embed3.setTitle('CONDITIONALLY DECIDED - TIER 3 (Could not DM)')
@@ -116,7 +116,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                     .setTitle('CONDITIONALLY DENIED')
 
                 deleteBlaster(inBlastDB, index);
-                author.send("The blaster **" + goToDB[index].name +"** has been conditionally **denied** for play. This means that the blaster might be able to play, but you'll need to talk to someone in core first.")
+                await author.send("The blaster **" + goToDB[index].name +"** has been conditionally **denied** for play. This means that the blaster might be able to play, but you'll need to talk to someone in core first.")
                     .catch((error) => {
                         console.log("Could not DM " + author.user.username)
                         embed4.setTitle('CONDITIONALLY DENIED (Could not DM)')
@@ -140,17 +140,17 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                         .setColor('#00d166')
                         .setTitle('BLASTER APPROVED - TIER 1')
                     msg.react('📊');
-                    author.send("The blaster **" + goToDB[index].name +"** has been **approved** for play, meaning you may use it any time!")
+                    await author.send("The blaster **" + goToDB[index].name +"** has been **approved** for play, meaning you may use it any time!")
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('BLASTER APPROVED - TIER 1 (Could not DM)')
-                        });
+                        }).then();
                     msg.edit({ embeds: [embed] });
                 } else {
                     const embed = new EmbedBuilder(msg.embeds[0])
                         .setColor('#008e44')
                         .setTitle('MODIFICATION APPROVED - TIER 1')
-                    author.send("The modification for the following image has been **approved** for play, meaning you may use it any time! " + goToDB[index].image)
+                    await author.send("The modification for the following image has been **approved** for play, meaning you may use it any time! " + goToDB[index].image)
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('MODIFICATION APPROVED - TIER 1 (Could not DM)')
@@ -166,7 +166,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                         .setColor('#00d166')
                         .setTitle('BLASTER APPROVED - TIER 2')
                     msg.react('📊');
-                    author.send("The blaster **" + goToDB[index].name +"** has been **approved** for play, meaning you may use it any time!")
+                    await author.send("The blaster **" + goToDB[index].name +"** has been **approved** for play, meaning you may use it any time!")
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('BLASTER APPROVED - TIER 2 (Could not DM)')
@@ -176,7 +176,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                     const embed = new EmbedBuilder(msg.embeds[0])
                         .setColor('#008e44')
                         .setTitle('MODIFICATION APPROVED - TIER 2')
-                    author.send("The modification for the following image has been **approved** for play, meaning you may use it any time! " + goToDB[index].image)
+                    await author.send("The modification for the following image has been **approved** for play, meaning you may use it any time! " + goToDB[index].image)
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('MODIFICATION APPROVED - TIER 2 (Could not DM)')
@@ -192,7 +192,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                         .setColor('#f93a2f')
                         .setTitle('BLASTER DECIDED - TIER 3')
                     msg.react('📊');
-                    author.send("The blaster **" + goToDB[index].name +"** has been **banned** from play, meaning this blaster can **not** be used for Humans vs. Zombies.")
+                    await author.send("The blaster **" + goToDB[index].name +"** has been **banned** from play, meaning this blaster can **not** be used for Humans vs. Zombies.")
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('BLASTER DECIDED - TIER 3 (Could not DM)')
@@ -202,7 +202,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                     const embed = new EmbedBuilder(msg.embeds[0])
                         .setColor('#f93a2f')
                         .setTitle('MODIFICATION DECIDED - TIER 3')
-                    author.send("The modification for the following image has been **denied**, meaning this blaster can **not** be used for Humans vs. Zombies. " + goToDB[index].image)
+                    await author.send("The modification for the following image has been **denied**, meaning this blaster can **not** be used for Humans vs. Zombies. " + goToDB[index].image)
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('MODIFICATION DECIDED - TIER 3 (Could not DM)')
@@ -218,7 +218,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                         .setColor('#f93a2f')
                         .setTitle('BLASTER DENIED')
                     msg.react('📊');
-                    author.send("The blaster **" + goToDB[index].name +"** has been **denied** for play. Please don't use it.")
+                    await author.send("The blaster **" + goToDB[index].name +"** has been **denied** for play. Please don't use it.")
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('BLASTER DENIED (Could not DM)')
@@ -228,7 +228,7 @@ function decisionReached(msg, inBlastDB, goToDB, index, author, tier, conditiona
                     const embed = new EmbedBuilder(msg.embeds[0])
                         .setColor('#f93a2f')
                         .setTitle('MODIFICATION DENIED')
-                    author.send("The modification for the following image has been **denied** for play. Please don't use it. " + goToDB[index].image)
+                    await author.send("The modification for the following image has been **denied** for play. Please don't use it. " + goToDB[index].image)
                         .catch((error) => {
                             console.log("Could not DM " + author.user.username)
                             embed.setTitle('MODIFICATION DENIED (Could not DM)')
