@@ -26,7 +26,7 @@ module.exports = {
 		let db = JSON.parse(dbJSON);
 		const blaster = db.find((blast) => blast.name.toLowerCase() == interaction.options.getString('name').toLowerCase());
 		if (blaster == undefined) {
-			await interaction.reply('**' + interaction.options.getString('name') + '** was not found in the database. Please use \`\/check blaster\` to get it approved!')
+			await interaction.reply({content: '**' + interaction.options.getString('name') + '** was not found in the database. Please use \`\/check blaster\` to get it approved!', ephemeral: !interaction.options.getBoolean('public') ?? true})
 		} else {
 			switch (blaster.tier) {
 				case -1: await interaction.reply({content: 'The **' + blaster.name + '** is currently pending review. Please check back later.', ephemeral: !interaction.options.getBoolean('public') ?? true}); break;
